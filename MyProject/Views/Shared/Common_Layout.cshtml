@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Content/js/jquery-3.7.0.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/bootstrap.bundle.min.js"></script>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/css/main_style.css" rel="stylesheet" />
+    <title>Welcome to Project</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row header">
+            <div class="col-sm-3 logo" style="padding:0px; margin:0px;">
+                <img src="~/Content/images/logo.png" width="100%" height="150px"  />
+            </div>
+            <div class="col-sm-9 sitename">
+                Welcome to Waheed's Enclave <p style="font-size:22px; color:darkgray;">A Journey to Jannah !</p>
+            </div>
+        </div>
+        <div class="row menu" style="padding:0px;">
+            <div class="col-sm-12 menu" style="padding:0px; margin:0px;">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            @Html.ActionLink("Home", "/", "Home", new { @class = "nav-item nav-link active",style= "margin-left:80px; font-family:bahnschrift" })
+                            @Html.ActionLink("About Us", "AboutUs", "Home", new { @class = "nav-item nav-link active", style = "margin-left:80px;font-family:bahnschrift" })
+                            @Html.ActionLink("Courses", "Courses", "Home", new { @class = "nav-item nav-link active", style = "margin-left:80px;font-family:bahnschrift" })
+                            @Html.ActionLink("Deen Scholars", "Scholar", "Home", new { @class = "nav-item nav-link active", style = "margin-left:80px;font-family:bahnschrift" })
+                            @Html.ActionLink("Register", "Register", "Home", new { @class = "nav-item nav-link active", style = "margin-left:80px;font-family:bahnschrift" })
+                            @Html.ActionLink("Contact", "ContactUs", "Home", new { @class = "nav-item nav-link active", style = "margin-left:80px;font-family:bahnschrift" })
+                            @Html.ActionLink("Login", "Login", "Home", new { @class = "nav-item nav-link active", style = "margin-left:80px;font-family:bahnschrift" })
+
+                        </div>
+                    </div>
+                </nav>
+            </div> 
+        </div>
+        <div class="row content" style="min-height:600px;">
+            <div class="col-sm-12" style="padding:0px;margin:0px;">
+                @RenderBody()
+            </div>
+        </div>
+        <div class="row footer" style="padding-top:10px">
+            <div class="col-sm-6 copy">
+                Copyright &copy; to Waheed.Inc
+            </div>
+            <div class="col-sm-6 developer">
+                Developed by: A.W.Ansari.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

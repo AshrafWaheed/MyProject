@@ -1,0 +1,60 @@
+﻿.header
+{
+    min-height:120px;
+   
+
+}
+.logo
+{
+    min-height:120px;
+    background-color:antiquewhite;
+}
+.sitename
+{
+    min-height:95px;
+    background-color:darkslateblue;
+    font-size:45px;
+    text-align:center;
+    font-weight:bold;
+    padding-top:25px;
+    color:white;
+}
+.menu
+{
+    min-height:40px;
+    padding-top:8px;
+    background-color:#c36262;
+}
+.slider
+{
+    min-height:350px;
+    background-color:aqua;
+
+}
+
+.main
+{
+    min-height:500px;
+    font-size:18px;
+}
+
+.leftmain
+{
+    min-height:500px;
+    background-color:#f4dbdb;
+
+}
+.rightmain
+{
+    min-height:500px;
+    background-color:#f7efef;
+    text-align:justify;
+}
+.footer
+{
+    min-height:50px;
+    text-align:center;
+    background-color:#413838db;
+    font-size:18px;
+    color:white;
+}

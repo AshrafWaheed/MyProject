@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/Common_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <br />
+        <br />
+        <h2>REGISTRATION FORM</h2>
+        <h2>------------------------------------------------</h2>
+        <br />
+
+        <fieldset width="100%">
+            <p class="text-center text-danger h3">@ViewBag.Message</p>
+            @using (Html.BeginForm("Register", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <label>Enter Nmae:</label>
+                <input class="form-control" type="text" name="Name" placeholder="Enter name">
+                <br>
+                <label id="my"><b>Gender:</b></label>
+                <input type="radio" value="Male" name="Gender" placeholder="">
+                <label>Male</label>
+                <input type="radio" value="Female" name="Gender" placeholder="">
+                <label>Female</label>
+                <br>
+                <label>Select Course:</label>
+
+                <select name="Course" class="form-control">
+                    <!--<option>Courses</option>-->
+                    <option>BCA</option>
+                    <option>BBA</option>
+                    <option>B Com</option>
+                    <option>MCA</option>
+                    <option>MBA</option>
+                </select>
+                <br>
+                <label>Select Year</label>
+
+
+                <select name="CourseYear" class="form-control">
+                    <!--<option>Year</option>-->
+                    <option>I</option>
+                    <option>II</option>
+                    <option>III</option>
+                </select>
+                <br />
+                <label>E-Mail:</label>
+
+                <input class="form-control" type="email" name="EmailId" placeholder="Enter email">
+                <br>
+                <label>Mobile no.:</label>
+
+                <input class="form-control" type="number" name="MobileNo" placeholder="Enter mobile number">
+                <br>
+
+                <label><b>Upload File:</b></label>
+
+
+                <input class="form-control" type="file" name="UserPic" placeholder="">
+                <br>
+
+                <label>Password:</label>
+
+                <input class="form-control" type="password" name="Password" placeholder="Enter password">
+                <br />
+                <label>Confirm Passsword:</label>
+                <input class="form-control" type="password" name="ConfirmPassword" placeholder="Confirm password">
+                <br /><br />
+                <input class="form-control btn-success" type="Submit" value="Register Now" style="margin-bottom:8px;">
+                <input class="form-control btn-danger" type="reset" value="Clear All">
+                <br>
+            }
+        </fieldset>
+        <a href="@Url.Action("ShowAll", "Home")">Show All</a>
+
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+<div class="row"></div>
+<div class="row"></div>
+

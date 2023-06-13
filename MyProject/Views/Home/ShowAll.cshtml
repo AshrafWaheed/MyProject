@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+@using MyProject.Models
+@model IEnumerable<Student>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowAll</title>
+</head>
+<body>
+    <div>
+
+        <table>
+            <tr>
+                <th>Roll NO</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>Course Year</th>
+                <th>Email ID</th>
+                <th>Mobile Number</th>
+                <th>Registered on</th>
+            </tr>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.RollNo</td>
+                    <td>@student.Name</td>
+                    <td>@student.Gender</td>
+                    <td>@student.Course</td>
+                    <td>@student.CourseYear</td>
+                    <td>@student.EmailId</td>
+                    <td>@student.MobileNo</td>
+                    <td>@student.RegisteredOn</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(student.UserPicName))
+                        {
+                            <img src="@Url.Content("~/Content/UserPics/" + student.UserPicName)" alt="Student Image" width="200px" />
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>
